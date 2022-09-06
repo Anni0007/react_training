@@ -1,15 +1,14 @@
-import cardImage from "../images/pexels-photos.jpeg"
-import starIcon from "../images/download.png"
-function Card() {
+// import starIcon from "../images/download.png"
+function Card(props) {
     return (
         <div className="card">
-            <img src={cardImage} className="card-image"></img>
+            <img src={props.img} className="card-image"></img>
             <div className="rating-div">
-                <img src={starIcon} className="star-icon"></img>
-                <p className="card-rating"> 5.0 .USA</p>
+                <img src="../images/download.png" className="star-icon"></img>
+                <p className="card-rating"> {props.rating} . {props.country}</p>
             </div>
-            <h4 className="card-title">Nature Is very Beautiful</h4>
-            <p className="pricing"><strong>From $ 140</strong> / person</p>
+            <h4 className="card-title">{props.title}</h4>
+            <p className="pricing"><strong>From $ {props.pricing}</strong> / person</p>
         </div>
     )
 }
