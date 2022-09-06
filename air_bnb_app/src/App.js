@@ -7,11 +7,8 @@ import data from './data';
 function App() {
   const cards = data.map((d)=> {
     return (
-    <Card img={d.img} 
-     rating = {d.rating}
-     title = {d.title} 
-     country= {d.country}
-     pricing = {d.pricing}/>
+    <Card key={d.id}
+      {...d}/>
     )
   })
  
@@ -19,7 +16,7 @@ function App() {
     <div className="App">
       <Header/>
       <Hero/>
-      {cards}
+      <div className='cards-element'>{cards}</div>
     </div>
   )  
 }

@@ -16,12 +16,14 @@
 }
 
 .card {
-  width: 25%;
+  width: 175px;
   padding: 20px;
-  /* border:1px solid grey; */
+  border:1px solid grey;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  border-radius: 10px;
   margin: 10px;
-  /* display: flex; */
-  /* border-radius: 10px; */
 }
 
 .card-image {
@@ -61,4 +63,10 @@
   height: 100%;
   width: 100%;
   border-radius: 5px;
+}
+
+.cards-element {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
 }
